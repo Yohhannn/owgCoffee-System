@@ -1,0 +1,27 @@
+.text-field {
+    -fx-box-shadow: inset #abacaf 0 0 0 2px;
+    -fx-border-width: 0;
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-appearance: none;
+    -fx-width: 100%;
+    -fx-position: relative;
+    -fx-border-radius: 3px;
+    -fx-padding: 9px 12px;
+    -fx-line-height: 1.4;
+    -fx-text-fill: rgb(171, 172, 175);
+    -fx-font-size: 16px;
+    -fx-font-weight: 400;
+    -fx-height: 40px;
+    -fx-transition: all .2s ease;
+}
+
+.text-field:hover {
+    -fx-box-shadow: 0 0 0 0 #fff inset, #abacaf 0 0 0 2px;
+}
+
+.text-field:focused {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-box-shadow: 0 0 0 0 #fff inset, #abacaf 0 0 0 3px;
+    -fx-highlight-fill: rgba(0, 0, 0, 0);
+    -fx-highlight-text-fill: rgb(171, 172, 175);
+}

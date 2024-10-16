@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#loseFocus" prefHeight="1050.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.yohhan.dev.owgrevamp.userFunction">
+   <children>
+      <StackPane focusTraversable="true" layoutX="-37.0" layoutY="14.0" prefHeight="1050.0" prefWidth="1900.0">
+         <children>
+            <AnchorPane fx:id="login_fxml" focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#loseFocus" prefHeight="1050.0" prefWidth="1900.0">
+               <children>
+                  <ImageView fitHeight="1080.0" fitWidth="1930.0" layoutX="8.0" layoutY="-17.0">
+                     <image>
+                        <Image url="@../../../../LOGIN%20BG.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="800.0" layoutY="177.0" opacity="0.73" prefHeight="764.0" prefWidth="1004.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #545454; -fx-border-width: 5; -fx-border-radius: 35;" />
+                  <Text fill="#422820" layoutX="929.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start your day the On What Grounds way">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="login_passwordField" alignment="CENTER" layoutX="1090.0" layoutY="650.0" prefHeight="57.0" prefWidth="419.0" promptText="Password" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="login_usernameField" alignment="CENTER" layoutX="1091.0" layoutY="541.0" prefHeight="60.0" prefWidth="419.0" promptText="Username or Email" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <Button fx:id="login_loginButton" layoutX="1216.0" layoutY="764.0" mnemonicParsing="false" onAction="#login_loginButtonAction" stylesheets="@button.css" text="Login" />
+                  <Button fx:id="login_registerButton" layoutX="1328.0" layoutY="764.0" mnemonicParsing="false" onAction="#login_registerButtonAction" stylesheets="@button.css" text="Register" />
+                  <Label fx:id="login_loginLabel" alignment="CENTER" layoutX="949.0" layoutY="441.0" prefHeight="60.0" prefWidth="713.0" textFill="#00f72a">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="register_fxml" focusTraversable="true" prefHeight="1050.0" prefWidth="1900.0" visible="false">
+               <children>
+                  <ImageView fx:id="loseFocus" fitHeight="1130.0" fitWidth="1970.0" layoutY="-14.0">
+                     <image>
+                        <Image url="@../../../../OWG%20REGISTER%20BG.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="122.0" layoutY="190.0" opacity="0.73" prefHeight="775.0" prefWidth="943.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #545454; -fx-border-width: 5; -fx-border-radius: 35;" />
+                  <PasswordField fx:id="register_passwordFieldRegister" alignment="CENTER" layoutX="175.0" layoutY="610.0" prefHeight="72.0" prefWidth="382.0" promptText="Password" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="register_emailFieldRegister" alignment="CENTER" layoutX="170.0" layoutY="354.0" prefHeight="70.0" prefWidth="388.0" promptText="Email" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="register_loginButton" layoutX="119.0" layoutY="1006.0" mnemonicParsing="false" onAction="#register_loginButtonActionRegister" prefHeight="68.0" prefWidth="173.0" style="-fx-background-color: #D8B38E;" stylesheets="@buttonRegisterLogin.css" text="🠈 Back" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="register_registerButton" layoutX="442.0" layoutY="849.0" mnemonicParsing="false" onAction="#register_registerButtonActionRegister" prefHeight="54.0" prefWidth="282.0" style="-fx-background-color: #97765E;" stylesheets="@buttonRegister.css" text="Register" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="register_usernameFieldRegister" alignment="CENTER" layoutX="172.0" layoutY="483.0" prefHeight="68.0" prefWidth="384.0" promptText="Username" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="register_firstnameField" alignment="CENTER" layoutX="628.0" layoutY="354.0" prefHeight="71.0" prefWidth="359.0" promptText="First Name" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="register_lastnameField" alignment="CENTER" layoutX="628.0" layoutY="482.0" prefHeight="70.0" prefWidth="359.0" promptText="Last Name" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="register_phoneField" alignment="CENTER" layoutX="629.0" layoutY="610.0" prefHeight="72.0" prefWidth="359.0" promptText="Phone Number" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="register_addressField" alignment="CENTER" layoutX="630.0" layoutY="739.0" prefHeight="71.0" prefWidth="359.0" promptText="Address" stylesheets="@styles.css">
+                     <font>
+                        <Font name="Georgia Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="register_birthday" layoutX="177.0" layoutY="739.0" onAction="#register_birthdayRegister" prefHeight="70.0" prefWidth="382.0" promptText="MM-DD-YYYY" style="-fx-background-color: transparent;" stylesheets="@../../../../../../../../OWG/src/main/resources/me/yohhan/dev/owg/datepick.css">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </DatePicker>
+                  <Text fill="WHITE" layoutX="197.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILL UP YOUR INFORMATION BELOW" wrappingWidth="801.469482421875">
+                     <font>
+                        <Font name="Georgia Bold" size="38.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="register_errorMessageRegister" alignment="CENTER" layoutX="288.0" layoutY="126.0" onMouseClicked="#loseFocus" prefHeight="58.0" prefWidth="641.0" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

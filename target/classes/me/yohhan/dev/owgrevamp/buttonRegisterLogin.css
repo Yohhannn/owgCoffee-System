@@ -1,0 +1,37 @@
+.button {
+    -fx-display: flex;
+    -fx-alignment: center;
+    -fx-font-family: inherit;
+    -fx-font-weight: 500;
+    -fx-font-size: 15px;
+    -fx-padding: 0.5em 1em;
+    -fx-text-fill: white;
+    -fx-background-color: #a86b4e;
+    -fx-background-radius: 20em;
+    -fx-border-color: transparent;
+    -fx-border-color: transparent;
+    -fx-box-shadow: 0 0.5em 1em -0.3em rgba(122, 72, 52, 0.745);
+    -fx-letter-spacing: 0.05em;
+    -fx-pref-width: 81px;
+    -fx-pref-height: 39px;
+
+
+}
+
+.button:hover {
+    -fx-box-shadow: 0 0.3em 0.7em -0.3em rgba(122, 72, 52, 0.745);
+}
+
+.button:pressed {
+    -fx-box-shadow: 0 0.2em 0.5em -0.2em rgba(122, 72, 52, 0.745);
+    -fx-background-color: #8e5038;
+    /*-fx-border-color: #6e3c29;*/
+    -fx-border-color: transparent;
+
+}
+
+}
+
+.button .svg {
+    -fx-margin-right: 6px;
+}

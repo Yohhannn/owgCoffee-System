@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#loseFocus" prefHeight="1050.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.yohhan.dev.owgrevamp.userFunction">
+   <children>
+      <StackPane focusTraversable="true" layoutX="-37.0" layoutY="14.0" prefHeight="1050.0" prefWidth="1900.0">
+         <children>
+            <AnchorPane fx:id="login_fxml" focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#loseFocus" prefHeight="1050.0" prefWidth="1900.0">
+               <children>
+                  <ImageView fitHeight="1080.0" fitWidth="1930.0" layoutX="8.0" layoutY="-17.0">
+                     <image>
+                        <Image url="@../../../../LOGIN%20BG.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="800.0" layoutY="177.0" opacity="0.73" prefHeight="764.0" prefWidth="1004.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #545454; -fx-border-width: 5; -fx-border-radius: 35;" />
+                  <Text fill="#422820" layoutX="929.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start your day the On What Grounds way">
+                     <font>
+                        <Font name="Georgia Bold" size="35.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="login_passwordField" alignment="CENTER" layoutX="1090.0" layoutY="650.0" prefHeight="57.0" prefWidth="419.0" promptText="Password" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="login_usernameField" alignment="CENTER" layoutX="1091.0" layoutY="541.0" prefHeight="60.0" prefWidth="419.0" promptText="Username or Email" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <Button fx:id="login_loginButton" layoutX="1216.0" layoutY="764.0" mnemonicParsing="false" onAction="#login_loginButtonAction" stylesheets="@button.css" text="Login" />
+                  <Button fx:id="login_registerButton" layoutX="1328.0" layoutY="764.0" mnemonicParsing="false" onAction="#login_registerButtonAction" stylesheets="@button.css" text="Register" />
+                  <Label fx:id="login_loginLabel" alignment="CENTER" layoutX="949.0" layoutY="441.0" prefHeight="60.0" prefWidth="713.0" textFill="#00f72a">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="register_fxml" focusTraversable="true" prefHeight="1050.0" prefWidth="1900.0" visible="false">
+               <children>
+                  <ImageView fx:id="loseFocus" fitHeight="1130.0" fitWidth="1970.0" layoutX="-33.0" layoutY="-22.0" onMouseClicked="#loseFocus" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../REGISTER%20BG.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+                  <PasswordField fx:id="register_passwordFieldRegister" alignment="CENTER" layoutX="567.0" layoutY="495.0" prefHeight="47.0" prefWidth="345.0" promptText="Password" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="register_emailFieldRegister" alignment="CENTER" layoutX="563.0" layoutY="302.0" prefHeight="47.0" prefWidth="345.0" promptText="Email" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <Button fx:id="register_loginButton" layoutX="98.0" layoutY="57.0" mnemonicParsing="false" onAction="#register_loginButtonActionRegister" prefHeight="39.0" prefWidth="81.0" stylesheets="@buttonRegisterLogin.css" text="🠈 Back" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="register_registerButton" layoutX="929.0" layoutY="717.0" mnemonicParsing="false" onAction="#register_registerButtonActionRegister" prefHeight="39.0" prefWidth="99.0" stylesheets="@buttonRegister.css" text="Register">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="register_errorMessageRegister" alignment="CENTER" layoutX="766.0" layoutY="208.0" onMouseClicked="#loseFocus" prefHeight="57.0" prefWidth="408.0" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="register_usernameFieldRegister" alignment="CENTER" layoutX="566.0" layoutY="398.0" prefHeight="47.0" prefWidth="345.0" promptText="Username" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="register_firstnameField" alignment="CENTER" layoutX="1034.0" layoutY="302.0" prefHeight="47.0" prefWidth="345.0" promptText="First Name" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="register_lastnameField" alignment="CENTER" layoutX="1033.0" layoutY="394.0" prefHeight="47.0" prefWidth="345.0" promptText="Last Name" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="register_phoneField" alignment="CENTER" layoutX="1038.0" layoutY="499.0" prefHeight="47.0" prefWidth="345.0" promptText="Phone Number" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="register_addressField" alignment="CENTER" layoutX="1033.0" layoutY="586.0" prefHeight="47.0" prefWidth="345.0" promptText="Address" stylesheets="@styles.css">
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </TextField>
+                  <DatePicker fx:id="register_birthday" layoutX="651.0" layoutY="590.0" onAction="#register_birthdayRegister" prefHeight="39.0" prefWidth="192.0" promptText="MM-DD-YYYY" style="-fx-background-color: transparent;" stylesheets="@../../../../../../../../OWG/src/main/resources/me/yohhan/dev/owg/datepick.css">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </DatePicker>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
